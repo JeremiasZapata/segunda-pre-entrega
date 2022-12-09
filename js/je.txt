@@ -1,0 +1,106 @@
+// let nombre = "Jeremias"; //string siempre entre ""
+// let edad = 30; // number no lleva ""
+// let alumno = true; // booleans true o false
+
+
+// console.log(nombre);
+
+
+// Condicionales
+
+// let nombre = prompt("ingrese su nombre");
+// let edad = parseInt( prompt("ingrese su edad"));
+// alert("Bienvenido " + nombre + " su edad es " + edad + " años");
+
+// if( edad >= 18){
+// alert("Ud es mayor de edad")
+// } else{
+//     alert("Ud es menor de edad, no puede seguir")
+// }
+
+let nombre = prompt("Ingrese su nombre.");
+let edad = parseInt( prompt("Ingrese su edad."));
+alert("Bienvenido al bar 47&48 " + nombre + " su edad es " + edad + " años.");
+
+
+if(edad >= 18 && edad <= 30){
+alert("Ud., puede ingresar al boliche.");
+}else if(edad > 30 && edad < 45){
+    alert("Dirjase al sector mayores de 30.");
+}else if(edad >= 45 && edad < 99){
+    alert("Su momento ya pasó.")
+    if( edad == 47 || edad == 48){
+        alert("Pero por tener esta edad podes ir al bar por un cafe");
+    }
+
+}
+else{
+    alert("Ud., es menor de edad, venga acompañado de un adulto responsable.");
+}
+
+
+function Bienvenidos(){
+    let cuentas = confirm("Hacemos unas cuentas, para pasar el rato");
+    if (cuentas == true){
+        alert("vamos!!!!");
+        calcularAlumnos();
+}else{
+    alert(bajon);
+    }
+}
+
+Bienvenidos();
+
+function calcularAlumnos(){
+    let cantidadAlumnos = parseInt( prompt("Ingrese la cantidad de alumnos que hay en la division. Ojo que se que son menos de 15!"));
+
+    if(cantidadAlumnos > 15){
+        alert("Dije que se que son como mucho 15");
+        calcularAlumnos();
+        }else if (cantidadAlumnos < 15 && cantidadAlumnos > 0){
+            preguntarNotas();
+        }
+    }
+
+function preguntarNotas(){
+    console.log("Vamos a ver esas notas");
+    let resultado = 0;
+    for(let i = 0; i < cantidadAlumnos; i++){
+        console.log("Preguntar notas"); 
+        let notas = parseInt(prompt("Ingrese la nota"));
+        resultado += notas;
+    }
+    const total = resultado / cantidadAlumnos;
+    alert(total);
+}
+
+
+
+
+
+
+
+    
+    
+        
+//         cantidadAlumnos = parseInt(prompt("Dale, otro oportunidad...acordate que como mucho son 15"))
+//     }
+//     if(cantidadAlumnos < 15){
+
+//         for(let i = 0; i< cantidadAlumnos; i ++){
+//             console.log("Preguntar notas")
+//         }
+//     }
+    
+// }else{
+//     alert("bajon")
+// }
+
+
+
+// document.onkeydown = function(evt) {
+//     evt = evt || window.event;
+//     if (evt.keyCode == 27) {
+//         alert('Esc key pressed.');
+//     }
+// };
