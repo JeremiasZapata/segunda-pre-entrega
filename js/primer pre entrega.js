@@ -115,7 +115,7 @@ function Carteleras(){
 Carteleras();
 
 
-console.log( peliculas.indexOf([nombre],"Advenger") )
+console.log( peliculas.indexOf([nombre],"Advenger") ) // Esta parte no se como resolver
 let opcion
 let opcion1
 function menuInicio(){
@@ -155,7 +155,7 @@ switch(opcion){
             filtro_clas = "mayores 16";
             break;
         case "4":
-            menuInicio();
+            menuInicio();   //esta es la otra parte que no se como hacer
             // break;
         }
         // default:
