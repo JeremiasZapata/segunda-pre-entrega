@@ -81,21 +81,103 @@
 //*************************2da pre entrega******************************* */
 
 const peliculas = [
-    {nombre : "Avenger", clasificacion: "ATP", duracion : "120min", tipo : "3D"}, 
-    {nombre : "avatar", clasificacion: "ATP", duracion : "90min", tipo : "4D"},
+    {nombre : "Advenger", clasificacion: "ATP", duracion : "120min", tipo : "3D"}, 
+    {nombre : "Avatar", clasificacion: "ATP", duracion : "90min", tipo : "4D"},
     {nombre : "Tiburon", clasificacion: "mayores 12", duracion : "90min", tipo : "2D"},
     {nombre : "Freddy", clasificacion: "mayores 16", duracion : "120min", tipo : "2D"},
     {nombre : "Jurasic Park", clasificacion: "mayores 12", duracion : "160 min", tipo : "3D"},
 ]
 
-
-console.log( peliculas.indexOf("Avenger") )
-
-
-for (const cartelera of peliculas) {
-    
-    console.log(cartelera.nombre)
+// con esto podemos ver que hay en el array de peliculas, pero toda la info completa
+for(let i=0; i<=4; i++ ){
+    console.log(peliculas[i]);
 }
+
+
+function Carteleras(){
+    let namelist = [];
+    let name = "";
+    let cartelera = confirm("¿Quiere saber que peliculas tenemos?");
+    if (cartelera == true){
+        for (const cartelera of peliculas) {
+                console.log(cartelera.nombre);
+                name = cartelera.nombre;
+                namelist.push(name);
+                
+
+        }
+}else{
+    alert("Muchas gracias!");
+    
+    }
+    alert( "Las peliculas disponibles son: " + namelist)
+}
+Carteleras();
+
+
+console.log( peliculas.indexOf([nombre],"Advenger") )
+let opcion
+let opcion1
+function menuInicio(){
+    
+
+var menu ="Ingrese una opcion\n";
+
+menu+="1. Clasificacion\n";
+menu+="2. Duracion\n";
+menu+="3. Tipo\n";
+menu+="4. Salir\n";
+opcion = prompt(menu);
+}
+menuInicio();
+
+
+
+switch(opcion){
+    case "1":
+
+        var menu ="Ingrese una opcion\n";
+
+        menu+="1. ATP\n";
+        menu+="2. Mayores de 12\n";
+        menu+="3. Mayores de 16\n";
+        menu+="4. Menu anterior\n";
+        menu+="5. Salir\n";
+        opcion1 = prompt(menu);
+    switch(opcion1){
+        case "1":
+            filtro_clas = "ATP";
+            break;
+        case "2":
+            filtro_clas = "mayores 12";
+            break;
+        case "3":
+            filtro_clas = "mayores 16";
+            break;
+        case "4":
+            menuInicio();
+            // break;
+        }
+        // default:
+        //     alert("No es una opcion valida");
+
+
+let pelicula = peliculas.filter(pelicula => pelicula.clasificacion === filtro_clas);
+console.log(pelicula);
+        break;
+}
+
+
+
+// con esto filtramos por algun contenido de nuestra lista de objetos, en este caso clasificacion
+filtro_clas = "mayores 16";
+let pelicula = peliculas.filter(pelicula => pelicula.clasificacion === filtro_clas);
+console.log(pelicula);
+
+
+
+
+
 
 
 
