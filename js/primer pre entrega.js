@@ -83,6 +83,9 @@
 let opcion;
 let opcion1;
 let pel;
+let menuSalas = "" ;
+let pelist = "";
+let cartelera;
 
 let pelicula = "";
 
@@ -95,37 +98,55 @@ const peliculas = [
     {id: 5, nombre : "Jurasic Park", clasificacion: "mayores 12", duracion : "160 min", tipo : "3D"},
 ]
 
+// con esto podemos ver que hay en el array de peliculas, pero toda la info completa
+for(let i=0; i<=4; i++ ){
+    console.log(peliculas[i]);
+}
+
+
 
 // aca hacemos un listado del nombre de las peliculas
 function Carteleras(){
     let namelist = [];
     let name = "";
-    let cartelera = confirm("¿Quiere saber que peliculas tenemos?");
+    cartelera = confirm("¿Quiere saber que peliculas tenemos?");
     if (cartelera == true){
         for (const cartelera of peliculas) {
                 console.log(cartelera.nombre);
                 name = cartelera.nombre;
                 namelist.push(name);
-                
+                pelist = namelist;
 
         }
 }else{
     alert("Muchas gracias!");
     
     }
-    alert( "Las peliculas disponibles son: " + namelist)
+    // alert( "Las peliculas disponibles son: " + pelist)
 }
 Carteleras();
 
+if(cartelera == true ){
+    alert( "Las peliculas disponibles son: " + pelist);
+}
+
+
+// aca preguntamos una y otra vez en que sala se proyecta hasta que ingrese 6 (salir)
+
+while (menuSalas!=6){
+
+
 // con esto nos muestra el index en donde se encuentra el dato que elegimos.
-const menuSalas = prompt(`Elija una opcion para saber en que sala se proyecta
+menuSalas = prompt(`Elija una opcion para saber en que sala se proyecta
 1:Advenger
 2:Avatar
 3:Tiburon
 4:Freddy
 5:Jurasic Park
-6:Volver
-7:Salir `);
+6:Salir `);
+
+
+
 
 if(menuSalas==1){
     pel = "Advenger";
@@ -133,13 +154,12 @@ if(menuSalas==1){
     pel = "Avatar";
 }else if(menuSalas==3){
     pel = "Tiburon";
-}else if(menuSalas==3){
-    pel = "Tiburon";
-}else if(menuSalas==3){
-    pel = "Tiburon";
-}else if(menuSalas==3){
-    pel = "Tiburon";
+}else if(menuSalas==4){
+    pel = "Freddy";
+}else if(menuSalas==5){
+    pel = "Jurasic Park";
 }
+
 
 
 
@@ -147,11 +167,11 @@ let objeto = peliculas.findIndex(property => {
     return property.nombre === pel ;
 });
 console.log(objeto);
-
-// con esto podemos ver que hay en el array de peliculas, pero toda la info completa
-for(let i=0; i<=4; i++ ){
-    console.log(peliculas[i]);
 }
+
+
+
+
 
 
 
