@@ -122,9 +122,10 @@ function Carteleras(){
     alert("Muchas gracias!");
     
     }
-    // alert( "Las peliculas disponibles son: " + pelist)
+    
 }
 Carteleras();
+
 
 if(cartelera == true ){
     alert( "Las peliculas disponibles son: " + pelist);
