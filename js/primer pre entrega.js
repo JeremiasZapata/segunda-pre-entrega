@@ -149,15 +149,15 @@ menuSalas = prompt(`Elija una opcion para saber en que sala se proyecta
 
 
 
-if(menuSalas==1){
+if(menuSalas===1){
     pel = "Advenger";
-}else if(menuSalas==2){
+}else if(menuSalas===2){
     pel = "Avatar";
-}else if(menuSalas==3){
+}else if(menuSalas===3){
     pel = "Tiburon";
-}else if(menuSalas==4){
+}else if(menuSalas===4){
     pel = "Freddy";
-}else if(menuSalas==5){
+}else if(menuSalas===5){
     pel = "Jurasic Park";
 }
 
@@ -189,7 +189,9 @@ function menuInicio() {
 menuInicio();
 
 
-
+function menu3() {
+    menu2(opcion)
+}
 
 
 console.log(opcion)
@@ -218,9 +220,12 @@ switch (opcion) {
             case "4":
                 menuInicio(); //vuelve al menu anterior
                 break;
+            case "5": 
+            break;
             default:
                     alert("No es una opcion valida");
-                    menuInicio(); //al ser una opcion no valida, vuelve a preguntar todo de nuevo
+                    menu3(); //al ser una opcion no valida, vuelve a preguntar todo de nuevo
+                    
         }
         // default:
         //     alert("No es una opcion valida");
@@ -295,6 +300,24 @@ switch (opcion) {
 // filtro_clas = "mayores 16";
 // let pelicula = peliculas.filter(pelicula => pelicula.clasificacion === filtro_clas);
 // console.log(pelicula);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
