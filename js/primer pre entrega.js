@@ -115,7 +115,7 @@ function Carteleras(){
                 console.log(cartelera.nombre);
                 name = cartelera.nombre;
                 namelist.push(name);
-                pelist = namelist;
+                pelist = namelist; // lo usamos para mas adelante en el alert si es true
 
         }
 }else{
@@ -181,7 +181,7 @@ console.log(objeto);
 
 
 function menuInicio() {
-    let menu = "Ingrese una opcion\n1. Clasificacion\n2. Duracion\n3. Tipo\n4. Salir\n";
+    let menu = "FILTRO DE PELICULAS. Ingrese una opcion:\n1. Clasificacion\n2. Duracion\n3. Tipo\n4. Salir\n";
     opcion = prompt(menu);
     menu2(opcion)
 }
@@ -216,13 +216,17 @@ switch (opcion) {
                 console.log(pelicula);
                 break;
             case "4":
-                menuInicio(); //esta es la otra parte que no se como hacer
-                // break;
+                menuInicio(); //vuelve al menu anterior
+                break;
+            default:
+                    alert("No es una opcion valida");
+                    menuInicio(); //al ser una opcion no valida, vuelve a preguntar todo de nuevo
         }
         // default:
         //     alert("No es una opcion valida");
+        //     menuInicio(); //al ser una opcion no valida, vuelve a preguntar todo de nuevo
 
-        break;
+        // break;
 }
 }
 
