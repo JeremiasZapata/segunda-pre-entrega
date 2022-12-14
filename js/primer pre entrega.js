@@ -178,7 +178,7 @@ console.log(objeto);
 
 
 
-
+// solo funciona la opcion 1 del filtro 
 
 function menuInicio() {
     let menu = "FILTRO DE PELICULAS. Ingrese una opcion:\n1. Clasificacion\n2. Duracion\n3. Tipo\n4. Salir\n";
@@ -197,7 +197,7 @@ function menu3() {
 console.log(opcion)
 function menu2 (opcion) {
 let pelicula = ""
-switch (opcion) {
+switch (opcion) { // solo funciona la opcion 1, 4 y 5
     case "1":
         let menu2 = "Ingrese una opcion\n1. ATP\n2. Mayores de 12\n3. Mayores de 16\n4. Menu anterior\n5. Salir\n";
         opcion1 = prompt(menu2);
