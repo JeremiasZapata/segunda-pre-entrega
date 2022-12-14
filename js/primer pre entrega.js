@@ -227,50 +227,9 @@ switch (opcion) {
                     menu3(); //al ser una opcion no valida, vuelve a preguntar todo de nuevo
                     
         }
-        // default:
-        //     alert("No es una opcion valida");
-        //     menuInicio(); //al ser una opcion no valida, vuelve a preguntar todo de nuevo
-
-        // break;
-}
-}
-
-
-
-
-
-// console.log(opcion)
-// function menu2 (opcion) {
-// let pelicula = ""
-// switch (opcion) {
-//     case "1":
-//         let menu2 = "Ingrese una opcion\n1. ATP\n2. Mayores de 12\n3. Mayores de 16\n4. Menu anterior\n5. Salir\n";
-//         opcion1 = prompt(menu2);
-//         switch (opcion1) {
-//             case "1":
-//                 filtro_clas = "ATP";
-//                 pelicula = peliculas.filter(pelicula => pelicula.clasificacion === filtro_clas);
-//                 console.log(pelicula);
-//                 break;
-//             case "2":
-//                 filtro_clas = "mayores 12";
-//                 pelicula = peliculas.filter(pelicula => pelicula.clasificacion === filtro_clas);
-//                 console.log(pelicula);
-//                 break;
-//             case "3":
-//                 filtro_clas = "mayores 16";
-//                 pelicula = peliculas.filter(pelicula => pelicula.clasificacion === filtro_clas);
-//                 console.log(pelicula);
-//                 break;
-//             case "4":
-//                 menuInicio(); //esta es la otra parte que no se como hacer
-//                 // break;
-//         }
-//         default:
-//         alert("No es una opcion validados");
         
-// }
-// }
+}
+}
 
 
 
@@ -289,10 +248,13 @@ switch (opcion) {
 
 
 
-// let pelicula = peliculas.filter(pelicula => pelicula.clasificacion === filtro_clas);
-// console.log(pelicula);
-//         break;
-// }
+
+
+
+
+
+
+
 
 
 
