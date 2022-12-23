@@ -71,21 +71,24 @@ while (menuSalas != 6) {
 
 
 
-//Se podria hacer con un switch pero lo deje para contrastar con el menu mas abajo.
 
-    if (menuSalas == 1) {
+switch(menuSalas){
+    case "1":
         pel = "Advenger";
-    } else if (menuSalas == 2) {
+        break;
+    case "2":
         pel = "Avatar";
-    } else if (menuSalas == 3) {
+        break;
+    case "3":
         pel = "Tiburon";
-    } else if (menuSalas == 4) {
+        break;
+    case "4":
         pel = "Freddy";
-    } else if (menuSalas == 5) {
+        break;
+    case "5":
         pel = "Jurasic Park";
-    }
-
-
+        break;
+}
 
 
     let objeto = peliculas.findIndex(property => {
